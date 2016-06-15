@@ -1,0 +1,65 @@
+# Use case Configuration for Nexus 7
+# Adapted to Ubuntu Touch by David Henningsson <david.henningsson@canonical.com>
+
+SectionVerb {
+
+	EnableSequence [
+		cdev "hw:udrc"
+
+#		Turn the left mixer off and the right one on
+#		Common pins are always connected by the card configuration
+		cset "name='IN1_L to Left Mixer Positive Resistor' 10 kOhm"
+		cset "name='IN1_R to Right Mixer Positive Resistor' 10 kOhm"
+
+#		Disable the Mic PGA and AGC stuff
+		cset "name='Mic PGA Switch' Off"
+		cset "name='PGA Level Volume' 0"
+		cset "name='ADCFGA Right Mute Switch' Off"
+		cset "name='ADCFGA Left Mute Switch' Off"
+		cset "name='AGC Attack Time' 0"
+		cset "name='AGC Decay Time' 0"
+		cset "name='AGC Gain Hysteresis' 0"
+		cset "name='AGC Hysteresis' 0"
+		cset "name='AGC Max PGA' 0"
+		cset "name='AGC Noise Debounce' 0"
+		cset "name='AGC Noise Threshold' 0"
+		cset "name='AGC Target Level' 0"
+		cset "name='AGC Left Switch' Off"
+		cset "name='AGC Right Switch' Off"
+
+		cset "name='LO DAC Playback Switch' On"
+		cset "name='LOL Output Mixer L_DAC Switch' On"
+		cset "name='LOR Output Mixer R_DAC Switch' Off"
+
+		exec "echo Setting up to use the 6-pin DIN Connector..."
+	]
+
+	DisableSequence [
+	]
+
+	# ALSA PCM
+	Value {
+		# ALSA PCM device for HiFi
+		PlaybackPCM "hw:CARD=udrc,DEV=0"
+		CapturePCM "hw:CARD=udrc,DEV=0"
+	}
+}
+
+SectionDevice."ft817" {
+	Comment "Yaesu ft817 Transceiver"
+
+	EnableSequence [
+		cdev "hw:udrc"
+		exec "echo Setting up for FT-817..."
+		cset "name='ADC Level Volume' 35"
+		cset "name='LO Driver Gain Volume' 6"
+		cset "name='PCM Playback Volume' 127"
+	]
+
+	DisableSequence [
+	]
+
+	Value {
+		PlaybackChannels "2"
+	}
+}

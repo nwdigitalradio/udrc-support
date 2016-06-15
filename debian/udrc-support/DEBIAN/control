@@ -1,0 +1,10 @@
+Package: udrc-support
+Version: 1.0
+Architecture: all
+Maintainer: Jeremy McDermond <nh6z@nh6z.net>
+Installed-Size: 25
+Section: ham-radio
+Priority: optional
+Homepage: http://nwdigitalradio.com
+Description: UDRC Support Files
+    Miscellaneous suppot files to run the UDRC

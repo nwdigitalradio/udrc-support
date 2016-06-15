@@ -1,0 +1,15 @@
+Source: udrc-support
+Section: ham-radio
+Priority: optional
+Maintainer: Jeremy McDermond <nh6z@nh6z.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: http://nwdigitalradio.com
+#Vcs-Git: git://anonscm.debian.org/collab-maint/udrc-support.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/udrc-support.git;a=summary
+
+Package: udrc-support
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: UDRC Support Files
+    Miscellaneous suppot files to run the UDRC

@@ -1,0 +1,7 @@
+SUBSYSTEM!="sound", GOTO="sound_end"
+ACTION!="add|change", GOTO="sound_end"
+KERNEL!="card*", GOTO="sound_end"
+
+ATTRS{id}=="udrc", RUN+="/usr/bin/alsaucm -c udrc set _verb din6"
+
+LABEL="sound_end"

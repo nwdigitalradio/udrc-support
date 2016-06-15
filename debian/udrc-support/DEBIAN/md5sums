@@ -1,0 +1,7 @@
+bd6b0443713729e99d7e745484a0ff67  lib/udev/rules.d/40-udrc-support.rules
+bb92010d7df9ad36d2ce5c6f78888e05  usr/share/alsa/ucm/udrc/din6
+1ee3010df42b34789676e86640ad6779  usr/share/alsa/ucm/udrc/hd15
+4af8fee7dc4c6792337b2ba68bd49ad1  usr/share/alsa/ucm/udrc/udrc.conf
+86d8b9caa02e411adbdf95d684aa3abc  usr/share/doc/udrc-support/README.Debian
+06b06e475c1cca0852e3f732fb2c844a  usr/share/doc/udrc-support/changelog.gz
+ea6d670471a9f219209b84e0354f5bdd  usr/share/doc/udrc-support/copyright
